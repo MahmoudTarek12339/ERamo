@@ -18,6 +18,9 @@ class DoneScreen extends StatelessWidget {
           padding: const EdgeInsets.all(22.0),
           child: Column(
             children: [
+              const SizedBox(
+                height: 28,
+              ),
               const DoneImage(),
               const SizedBox(
                 height: 16,

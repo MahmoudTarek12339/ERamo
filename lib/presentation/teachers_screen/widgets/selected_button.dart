@@ -11,45 +11,43 @@ class SelectedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<TeachersProvider>(builder: (_, value, __) {
-      return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 17.5),
-        child: ElevatedButton(
-            onPressed: () {
-              value.changeSelection(index);
-            },
-            style: ElevatedButton.styleFrom(
-              padding: const EdgeInsets.symmetric(
-                vertical: 4,
-                horizontal: 20,
-              ),
-              backgroundColor: ColorManager.green,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(4),
-              ),
+      return ElevatedButton(
+          onPressed: () {
+            value.changeSelection(index);
+          },
+          style: ElevatedButton.styleFrom(
+            fixedSize: const Size(140,36),
+            padding: const EdgeInsets.symmetric(
+              vertical: 4,
+              horizontal: 20,
             ),
-            child: const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.check,
-                  size: 16,
+            backgroundColor: ColorManager.green,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(4),
+            ),
+          ),
+          child: const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.check,
+                size: 16,
+                color: Colors.white,
+              ),
+              SizedBox(
+                width: 8.0,
+              ),
+              Text(
+                'Booked',
+                style: TextStyle(
                   color: Colors.white,
+                  fontWeight: FontWeight.w500,
+                  fontFamily: 'Jost',
+                  fontSize: 14,
                 ),
-                SizedBox(
-                  width: 8.0,
-                ),
-                Text(
-                  'Booked',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w500,
-                    fontFamily: 'Jost',
-                    fontSize: 14,
-                  ),
-                ),
-              ],
-            )),
-      );
+              ),
+            ],
+          ));
     });
   }
 }

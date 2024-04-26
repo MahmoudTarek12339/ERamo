@@ -41,8 +41,8 @@ class PaymentScreen extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     fixedSize: const Size(150, 40),
                     padding: const EdgeInsets.symmetric(
-                      vertical: 12,
-                      horizontal: 16,
+                      vertical: 8.5,
+                      horizontal: 10,
                     ),
                     backgroundColor: ColorManager.lightGreen,
                     shape: RoundedRectangleBorder(
@@ -77,10 +77,7 @@ class PaymentScreen extends StatelessWidget {
                         Navigator.pop(context);
                       },
                       style: ElevatedButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 16,
-                          horizontal: 68.5,
-                        ),
+                        fixedSize: const Size(145, 56),
                         backgroundColor: ColorManager.grey,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
@@ -103,10 +100,7 @@ class PaymentScreen extends StatelessWidget {
                         Navigator.pushNamed(context, Routes.doneRoute);
                       },
                       style: ElevatedButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 16,
-                          horizontal: 54.5,
-                        ),
+                        fixedSize: const Size(145, 56),
                         backgroundColor: ColorManager.blue,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),

@@ -44,8 +44,8 @@ class SubjectsList extends StatelessWidget {
                     gridDelegate:
                         const SliverGridDelegateWithMaxCrossAxisExtent(
                             maxCrossAxisExtent: 200,
-                            mainAxisExtent: 170,
-                            childAspectRatio: 178 / 170,
+                            mainAxisExtent: 150,
+                            childAspectRatio: 170 / 178,
                             crossAxisSpacing: 8,
                             mainAxisSpacing: 12
                         ),

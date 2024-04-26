@@ -91,10 +91,7 @@ class InvoiceScreen extends StatelessWidget {
                         Navigator.pop(context);
                       },
                       style: ElevatedButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 16,
-                          horizontal: 68.5,
-                        ),
+                        fixedSize: const Size(140, 56),
                         backgroundColor: ColorManager.grey,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
@@ -117,10 +114,7 @@ class InvoiceScreen extends StatelessWidget {
                         Navigator.pushNamed(context, Routes.checkoutRoute);
                       },
                       style: ElevatedButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 16,
-                          horizontal: 54.5,
-                        ),
+                        fixedSize: const Size(140, 56),
                         backgroundColor: ColorManager.blue,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),

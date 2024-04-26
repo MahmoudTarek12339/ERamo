@@ -5,8 +5,6 @@ import '../../resources/color_manager.dart';
 class TeachersAppBarBottom extends StatelessWidget {
   const TeachersAppBarBottom({super.key});
 
-  final String userName = 'Mohamed Ragab';
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,6 +31,7 @@ class TeachersAppBarBottom extends StatelessWidget {
           ),
           Text(
             'Please choose your preferred teachers.',
+            textAlign: TextAlign.center,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 20,

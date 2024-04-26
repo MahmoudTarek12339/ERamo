@@ -11,19 +11,17 @@ class TeachersList extends StatelessWidget {
     return Center(
       child: Consumer<TeachersProvider>(
         builder: (_, value, __) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 33.0),
-            child: GridView.builder(
-              gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                  maxCrossAxisExtent: 220,
-                  mainAxisExtent: 220,
-                  childAspectRatio: 180 / 220,
-                  crossAxisSpacing: 8,
-                  mainAxisSpacing: 12),
-              shrinkWrap: true,
-              itemCount: value.teachers.length,
-              itemBuilder: (context, index) => TeachersListItem(index),
-            ),
+          return GridView.builder(
+            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                maxCrossAxisExtent: 175,
+                mainAxisExtent: 220,
+                childAspectRatio: 220 / 175,
+                crossAxisSpacing: 8,
+                mainAxisSpacing: 12),
+            shrinkWrap: true,
+            itemCount: value.teachers.length,
+            itemBuilder: (context, index) => TeachersListItem(index),
+            physics: const NeverScrollableScrollPhysics(),
           );
         },
       ),

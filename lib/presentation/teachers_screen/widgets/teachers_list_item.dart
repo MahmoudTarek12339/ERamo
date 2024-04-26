@@ -19,11 +19,9 @@ class TeachersListItem extends StatelessWidget {
         badgeAnimation: const badges.BadgeAnimation.fade(toAnimate: false),
         showBadge: value.teachers[index].isSelected,
         badgeStyle: badges.BadgeStyle(
-          badgeColor: ColorManager.green,
-          borderRadius: BorderRadius.circular(20),
-          padding: const EdgeInsets.all(10)
-        ),
-
+            badgeColor: ColorManager.green,
+            borderRadius: BorderRadius.circular(20),
+            padding: const EdgeInsets.all(10)),
         badgeContent: Text(
           value.teachers[index].selectionNumber.toString(),
           style: const TextStyle(
@@ -36,7 +34,10 @@ class TeachersListItem extends StatelessWidget {
         child: Container(
           height: 220,
           width: 175,
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 12.0,
+            vertical: 6,
+          ),
           decoration: BoxDecoration(
             color: ColorManager.veryLightGrey,
             borderRadius: BorderRadius.circular(12),
@@ -57,6 +58,8 @@ class TeachersListItem extends StatelessWidget {
               ),
               Text(
                 value.teachers[index].name,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontWeight: FontWeight.w400,
                   fontSize: 16,
